@@ -5,9 +5,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Social Media Spotter</title>
+	<style>
+    .user ul{
+      list-style: none;
+    }
+  </style>
 </head>
 <body>
-	<h1>Find a user by USERNAME</h1>
+	<h1>Find a user by username</h1>
 	<div id="buttonFormDiv">
 		<label for="username">Username:</label>
  		<input type="text" id="username" name="username" placeholder="Your Username">
@@ -40,22 +45,19 @@
 							'<ul>' +
 							'<li>Login: ' + githubUser.login + '</li>' +
 							'<li>Bio: ' + githubUser.bio + '</li>' +
-							'<li>Public repos: ' + githubUser.public_repos + '</li>' +
+							'<li>Public repos: ' + githubUser.public_repos
+							 + '</li>' +
 							'<li>URL: ' + '<a href="' + githubUser.html_url + '" target="_blank">' + githubUser.html_url + '</li>' +
 							'</ul>';
 							document.getElementById('user').innerHTML = displayGithubInfo;
 						} else {
 							console.log('Request failed');
 						}
-
 					}
 					xhr.send();
-
 				}
 			</script>
 		</div>
-
 	</div>
-
 </body>
 </html>

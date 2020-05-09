@@ -5,6 +5,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Social Media Spotter</title>
+	<style>
+    .user ul{
+      list-style: none;
+    }
+  </style>
 </head>
 <body>
 	<h1>Find a user by USERNAME</h1>
@@ -40,7 +45,8 @@
 							'<ul>' +
 							'<li>Login: ' + githubUser.login + '</li>' +
 							'<li>Bio: ' + githubUser.bio + '</li>' +
-							'<li>Public repos: ' + githubUser.public_repos + '</li>' +
+							'<li>Public repos: ' + githubUser.public_repos
+							 + '</li>' +
 							'<li>URL: ' + '<a href="' + githubUser.html_url + '" target="_blank">' + githubUser.html_url + '</li>' +
 							'</ul>';
 							document.getElementById('user').innerHTML = displayGithubInfo;

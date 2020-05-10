@@ -1,0 +1,10 @@
+  .user ul {
+    list-style-type: none;
+  }
+
+.user{
+    display: flex;
+    background:#f4f4f4;
+    padding:10px;
+    margin-bottom:10px;
+}
